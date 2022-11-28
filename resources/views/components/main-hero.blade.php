@@ -27,10 +27,10 @@
                                         id="category">
                                         <option selected value="">Categories</option>
 
-                                       {{--   @foreach (App\Models\Category::all() as $category)
+                                       @foreach (App\Models\Category::all() as $category)
                                             <option value="{{ $category->id }}">{{ $category->name }}
                                             </option>
-                                        @endforeach --}}
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
