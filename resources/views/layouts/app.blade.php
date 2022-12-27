@@ -39,16 +39,16 @@
                 </div>
                 <nav :class="{'block': open, 'hidden': !open}"
                     class="flex-grow px-4 pb-4 md:block md:pb-0 md:overflow-y-auto">
-                    <x-app-link class="bg-green-500 hover:bg-green-600" href="{{-- route('listings.create') --}}"
+                    <x-app-link class="bg-green-500 hover:bg-green-600" href="{{route('listings.create') }}"
                         :active="request()->routeIs('listings.create')">New Listing
                     </x-app-link>
-                    <x-app-link class="bg-green-500 hover:bg-green-600" href="{{-- route('listings.index') --}}"
+                    <x-app-link class="bg-green-500 hover:bg-green-600" href="{{  route('listings.index')}}"
                         :active="request()->routeIs('listings.index')">My Listings
                     </x-app-link>
                     <x-app-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">Dashboard
                     </x-app-link>
                     @role('admin')
-                    <x-app-link href="{{-- route('admin.index') --}}" :active="request()->routeIs('admin.index')">Admin
+                    <x-app-link href="{{route('admin.index') }}" :active="request()->routeIs('admin.index')">Admin
                     </x-app-link>
                     @endrole
                     @auth
@@ -91,11 +91,11 @@
                 </nav>
             </div>
     
-            <main class="m-2 p-2 w-full">
+            <main class="w-full p-2 m-2">
                 <!-- Page Heading -->
                 @if (isset($header))
                     <header class="bg-white">
-                        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                             {{ $header }}
                         </div>
                     </header>
